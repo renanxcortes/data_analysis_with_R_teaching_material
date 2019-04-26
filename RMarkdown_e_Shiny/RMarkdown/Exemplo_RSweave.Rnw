@@ -1,0 +1,16 @@
+\documentclass{article}
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+
+Um simples documento RSweave.
+
+
+<<mylabel>>=
+head(iris)
+@
+
+
+
+\end{document}

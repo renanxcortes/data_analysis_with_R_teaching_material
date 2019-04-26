@@ -1,0 +1,109 @@
+---
+title: "Guia de Referência de RMarkdown"
+author: "Nome do Autor"
+date: "Data do Documento"
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Isto é um documento de RMarkdown. Markdown é uma síntaxe para formatação de relatórios em HTML, PDF e MS Word. Para mais detalhes no uso do RMarkdow acessar <http://rmarkdown.rstudio.com>.
+
+Quando você clicar no botão **Knit** um documento será gerado que inclui o conteúdo e também. É possível adicionar pedaços de código de R desta maneira:
+
+```{r cars}
+summary(cars)
+```
+
+## Incluindo gráficos
+
+Você pode incluir gráficos, por exemplo:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note que o argumento `echo = FALSE` foi adicionado neste pedaço de código para previnir que o código que gerou o gráfico seja plotado. Ou seja, no documento final, só aparecerá o gráfico final.
+
+
+
+## Funcionalidades Gerais
+
+
+Texto plano
+
+Uma quebra de linha
+mantém a linha.
+
+Termine uma linha com dois espaços  
+para iniciar um novo parágrafo.
+
+*itálico* e _itálico_
+
+**negrito** and __negrito__
+
+sobrescrito^2^
+
+~~tachado~~
+
+[link](www.rstudio.com)
+
+Para incluir uma nota de rodapé faça isso^[Isto é uma nota de rodapé.].
+
+
+# Cabeçalho 1
+
+## Cabeçalho 2
+
+### Cabeçalho 3
+
+#### Cabeçalho 4
+
+##### Cabeçalho 5
+
+###### Cabeçalho 6
+
+
+Equação ao longo da linha: $A = \pi*r^{2}$
+
+regra horizontal ou traço horizontal:
+
+***
+
+* Lista não-ordenada
+
+* item 2
+ + sub-item 1
+ + sub-item 2
+
+1. Lista Ordenada
+2. item 2
+    + sub-item 1
+    + sub-item 2
+
+
+Primeiro Cabeçalho da Tabela | Segundo Cabeçalho
+------------- | -------------
+Célula 1 | Célula 2
+Célula 3 | Célula 4
+
+\begin{align}
+\label{teste}
+a=b+c
+\end{align}
+Esta é a minha referência para a Equação \ref{teste}.
+
+Equação sem numeração:
+$$
+a=f+g
+$$
+
+
